@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
 main {
     flex: 1;
 }
@@ -24,7 +25,16 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 10vh;
+    height: 80vh;
+}
+
+.terms-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
 }
 
 .logo {
@@ -47,8 +57,6 @@ main {
     font-weight: bold;
     color: #ff4081;
 }
-
-
 
 .app-buttons {
     display: flex;
@@ -87,60 +95,14 @@ main {
 }
 
 footer {
-    position: absolute;
-    bottom: 10px;
+    position: relative;
     width: 100%;
     text-align: center;
     font-size: 0.8em;
     color: #ccc;
-    
+    margin-top: auto;
 }
 
-.social-links {
-    margin-bottom: 10px;
-}
-
-.social-links a {
-    color: #ccc;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-@media (max-width: 768px) {
-    .logo {
-        height: 80px;
-    }
-
-    .title {
-        font-size: 3em;
-    }
-    
-    .subtitle {
-        font-size: 1.2em;
-    }
-
-    .app-buttons img {
-        height: 50px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        height: 60px;
-    }
-
-    .title {
-        font-size: 2.5em;
-    }
-    
-    .subtitle {
-        font-size: 1em;
-    }
-
-    .app-buttons img {
-        height: 40px;
-    }
-}
 .footer-container {
     background-color: #333;
     padding: 10px;
@@ -151,7 +113,6 @@ footer {
 .footer-container p {
     margin: 5px 0;
 }
-
 
 .footer-container a {
     color: #ccc;
@@ -171,17 +132,29 @@ footer {
     margin: 0 10px;
 }
 
-
 .social-links img {
     height: 30px;
     vertical-align: middle;
-    margin: 0 10px; /* Add space between images */
+    margin: 0 10px;
 }
 
-
-
 @media (max-width: 768px) {
-    
+    .logo {
+        height: 80px;
+    }
+
+    .title {
+        font-size: 3em;
+    }
+
+    .subtitle {
+        font-size: 1.2em;
+    }
+
+    .app-buttons img {
+        height: 50px;
+    }
+
     .social-links img {
         height: 25px;
         margin: 0 8px;
@@ -189,30 +162,99 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .logo {
+        height: 60px;
+    }
+
+    .title {
+        font-size: 2.5em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .app-buttons img {
+        height: 40px;
+    }
+
     .social-links img {
         height: 20px;
         margin: 0 5px;
     }
 }
 
-.preview-container {
-    text-align: center;
-    margin: 40px 0;
+/* Styles for Terms and Conditions Page */
+.terms-container {
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: #111;
+    border-radius: 8px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.preview-container h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.terms-container h2 {
+    color: #ff4081;
+    margin-top: 20px;
+    font-size: 1.8em;
 }
 
-.preview-container img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+.terms-container p {
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #ccc;
 }
 
-.preview-container p {
-    font-size: 1.2em;
-    color: #666;
+/* Ensure footer is placed correctly on the terms page */
+.terms-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+.terms-page-wrapper main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 20px;
+    }
+
+    .terms-container h2 {
+        font-size: 1.5em;
+    }
+
+    .terms-container p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-container {
+        padding: 15px;
+    }
+
+    .terms-container h2 {
+        font-size: 1.2em;
+    }
+
+    .terms-container p {
+        font-size: 0.9em;
+    }
+}
+.social-links img {
+    height: 30px;
+    vertical-align: middle;
+    margin: 0 10px; /* Space between images */
+    filter: grayscale(70%); /* Grayscale effect */
+    transition: filter 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-links img:hover {
+    filter: none; /* Remove grayscale on hover */
+}
